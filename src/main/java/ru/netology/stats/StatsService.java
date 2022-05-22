@@ -45,10 +45,9 @@ public class StatsService {
     }
 
     public int belowAverageSale(long[] sales) {
-        long sumMonth = 0;
-        for (long sale : sales) {
-            sumMonth += sale;
-        }
+        StatsService service = new StatsService();
+        long sumMonth = service.sumSale(sales);
+
         long mediumMonth = sumMonth / sales.length;
         int amountMonth = 0;
         for (long sale : sales) {
@@ -61,10 +60,9 @@ public class StatsService {
 
 
     public int aboveAverageSale(long[] sales) {
-        long sumMonth = 0;
-        for (long sale : sales) {
-            sumMonth += sale;
-        }
+        StatsService service = new StatsService();
+        long sumMonth = service.sumSale(sales);
+
         long mediumMonth = sumMonth / sales.length;
         int amountMonth = 0;
         for (long sale : sales) {
